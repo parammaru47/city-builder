@@ -30,6 +30,6 @@ public class SubmissionController {
     // Get top 10 by score
     @GetMapping("/highscores")
     public List<Submission> getHighScores() {
-        return submissionRepository.findTop10ByOrderByScoreDesc();
+        return submissionRepository.findTop10ByOrderBySustainabilityScoreDesc();
     }
 }

@@ -16,6 +16,8 @@ public class Submission {
     @Column(columnDefinition = "json")
     private String gridState;   // Store grid as JSON string
 
+    private int economyScore;
+    private int sustainabilityScore;
     private int score;
 
     private LocalDateTime timestamp = LocalDateTime.now();
@@ -30,8 +32,11 @@ public class Submission {
     public String getGridState() { return gridState; }
     public void setGridState(String gridState) { this.gridState = gridState; }
 
-    public int getScore() { return score; }
-    public void setScore(int score) { this.score = score; }
+    public int getEconomyScore() { return economyScore; }
+    public void setEconomyScore(int economyScore) { this.economyScore = economyScore; }
+
+    public int getSustainabilityScore() { return sustainabilityScore; }
+    public void setSustainabilityScore(int sustainabilityScore) { this.sustainabilityScore = sustainabilityScore; }
 
     public LocalDateTime getTimestamp() { return timestamp; }
     public void setTimestamp(LocalDateTime timestamp) { this.timestamp = timestamp; }
